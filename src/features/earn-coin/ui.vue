@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useCoinsStore } from '@/app/stores/coins';
+
+const { profitPerTap } = useCoinsStore();
 
 const emits = defineEmits(['earn'])
-
-const profitPerTap = ref<number>(1)
 </script>
 
 <template>

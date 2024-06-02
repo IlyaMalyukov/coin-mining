@@ -1,17 +1,19 @@
 <script setup lang="ts">
-import {ref} from "vue";
+import { useCoinsStore } from '@/app/stores/coins';
 import { Balance } from '@/entities';
 import { EarnCoin } from '@/features';
 
-const totalBalance = ref<number>(0);
+const store = useCoinsStore();
 
-const earnCoins = (coinsAmount: number) => totalBalance.value += coinsAmount;
+const earnCoins = (coinsAmount: number) => {
+  store.updateTotalBalance(coinsAmount)
+};
 </script>
 
 <template>
   <div class="page">
     <h1>Coin Mining</h1>
-    <balance :balance="totalBalance"/>
+    <balance :balance="store.totalBalance"/>
     <br>
     <earn-coin @earn="earnCoins" />
   </div>
