@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useCoinsStore } from '@/app/stores/coins';
 
-const { profitPerTap } = useCoinsStore();
+const store = useCoinsStore();
 
 const emits = defineEmits(['earn'])
 </script>
@@ -11,7 +11,7 @@ const emits = defineEmits(['earn'])
     class="coin"
     src="@/assets/icons/bitcoin.svg"
     alt="coin"
-    @click="emits('earn', profitPerTap)"
+    @click="emits('earn', store.profitPerTap)"
   />
 </template>
 

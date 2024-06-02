@@ -2,6 +2,7 @@
 import { useCoinsStore } from '@/app/stores/coins';
 import { Balance } from '@/entities';
 import { EarnCoin } from '@/features';
+import { Toolbar } from '@/widgets';
 
 const store = useCoinsStore();
 
@@ -16,6 +17,7 @@ const earnCoins = (coinsAmount: number) => {
     <balance :balance="store.totalBalance"/>
     <br>
     <earn-coin @earn="earnCoins" />
+    <toolbar/>
   </div>
 </template>
 
@@ -24,5 +26,6 @@ const earnCoins = (coinsAmount: number) => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 </style>

@@ -9,9 +9,15 @@ export const useCoinsStore = defineStore('coins', () => {
     totalBalance.value += coinsAmount;
   }
 
+  const boostPower = () => {
+    profitPerTap.value *= 10;
+    console.log(profitPerTap)
+  }
+
   return {
     totalBalance,
     profitPerTap,
     updateTotalBalance,
+    boostPower,
   };
 })
