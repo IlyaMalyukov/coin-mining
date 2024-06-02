@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue/dist/vue';
+import { ref } from 'vue';
 
 const emits = defineEmits(['earn'])
 
@@ -14,3 +14,15 @@ const profitPerTap = ref<number>(1)
     @click="emits('earn', profitPerTap)"
   />
 </template>
+
+<style lang="scss" scoped>
+.coin {
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:active {
+    transform: rotate(5deg);
+  }
+}
+</style>

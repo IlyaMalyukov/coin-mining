@@ -3,14 +3,17 @@ import {ref} from "vue";
 import { Balance } from '@/entities';
 import { EarnCoin } from '@/features';
 
-const totalBalance = ref<number>(0)
+const totalBalance = ref<number>(0);
+
+const earnCoins = (coinsAmount: number) => totalBalance.value += coinsAmount;
 </script>
 
 <template>
   <div class="page">
     <h1>Coin Mining</h1>
     <balance :balance="totalBalance"/>
-    <earn-coin />
+    <br>
+    <earn-coin @earn="earnCoins" />
   </div>
 </template>
 
