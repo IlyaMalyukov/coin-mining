@@ -48,8 +48,8 @@ const tools = [
 
 <style lang="scss" scoped>
 .toolbar {
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
+  margin-bottom: 0;
   border-radius: 15px;
   background-color: #292c31;
   display: grid;
