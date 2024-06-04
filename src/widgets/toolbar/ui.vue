@@ -16,10 +16,18 @@ const toSkins = () => {
   router.push(ROUTES.SKINS_PAGE.PATH);
 };
 
+const boostPower = () => {
+  if (store.isBoostPowerActive) {
+    return;
+  }
+
+  store.boostPower();
+};
+
 const tools = [
   {
     name: 'boost',
-    method: store.boostPower,
+    method: boostPower,
   },
   {
     name: 'leaderboard',
