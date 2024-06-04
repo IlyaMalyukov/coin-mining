@@ -1,36 +1,33 @@
 <script setup lang="ts">
 import { watch } from 'vue';
 import { useRouter } from 'vue-router';
-import { ROUTES } from '@/shared';
 import { useCoinsStore } from '@/app/stores/coins';
-import boostIcon from '@/assets/icons/boost.svg';
-import leaderboardIcon from '@/assets/icons/leaderboard.svg';
-import skinsIcon from '@/assets/icons/skins.svg';
+import { ROUTES, toolbarImage } from '@/shared';
+import type { Tool } from './types.ts';
 
 const store = useCoinsStore();
 const router = useRouter();
 
-const toLeaderboard = () => {};
+const toLeaderboard = () => {
+  router.push(ROUTES.LEADERBOARD_PAGE.PATH);
+};
 
 const toSkins = () => {
-  router.push(ROUTES.SKINS_PAGE.PATH)
+  router.push(ROUTES.SKINS_PAGE.PATH);
 };
 
 const tools = [
   {
     name: 'boost',
     method: store.boostPower,
-    icon: boostIcon,
   },
   {
     name: 'leaderboard',
     method: toLeaderboard,
-    icon: leaderboardIcon,
   },
   {
-    name: 'skins-page',
+    name: 'skins',
     method: toSkins,
-    icon: skinsIcon,
   },
 ];
 
@@ -55,7 +52,7 @@ watch(() => store.isBoostPowerActive, () => {
     >
       <img
         class="toolbar__icon"
-        :src="tool.icon"
+        :src="toolbarImage[<Tool>tool.name]"
         :alt="tool.name"
       />
     </div>

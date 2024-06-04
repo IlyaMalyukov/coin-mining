@@ -1,3 +1,3 @@
 export const API_PATHS = {
- BASE: 'https://fake-api.com',
+ BASE: 'https://jsonplaceholder.typicode.com',
 }

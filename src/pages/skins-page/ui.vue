@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 import { useCoinsStore } from '@/app/stores/coins';
-import { Skins } from '@/entities';
 import type { Skin } from '@/app/stores/coins/types.ts';
-
+import { Skins } from '@/entities';
+import { HeadTitle } from '@/shared';
 
 const router = useRouter();
 const store = useCoinsStore();
@@ -16,7 +16,10 @@ const selectSkin = (skin: Skin) => {
 
 <template>
   <div class="page">
-    <h1>SKINS</h1>
+    <head-title
+      title="SKINS"
+      is-back-button-visible
+    />
     <skins @select-skin="selectSkin"/>
   </div>
 </template>
