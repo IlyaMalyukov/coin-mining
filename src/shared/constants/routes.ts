@@ -7,4 +7,8 @@ export const ROUTES = {
         PATH: '/skins',
         NAME: 'skins-page',
     },
+    LEADERBOARD_PAGE: {
+        PATH: '/leaderboard',
+        NAME: 'leaderboard-page',
+    },
 };
