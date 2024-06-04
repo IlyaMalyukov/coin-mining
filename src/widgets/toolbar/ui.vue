@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { watch } from 'vue';
 import { useCoinsStore } from '@/app/stores/coins';
 import boostIcon from '@/assets/icons/boost.svg';
 import leaderboardIcon from '@/assets/icons/leaderboard.svg';
@@ -27,6 +28,16 @@ const tools = [
     icon: skinsIcon,
   },
 ];
+
+const stopBoostPower = () => {
+  setTimeout(() => {
+    store.stopBoostPower()
+  }, 10000)
+};
+
+watch(() => store.isBoostPowerActive, () => {
+  stopBoostPower()
+});
 </script>
 
 <template>
