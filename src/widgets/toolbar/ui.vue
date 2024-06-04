@@ -1,15 +1,20 @@
 <script setup lang="ts">
 import { watch } from 'vue';
+import { useRouter } from 'vue-router';
+import { ROUTES } from '@/shared';
 import { useCoinsStore } from '@/app/stores/coins';
 import boostIcon from '@/assets/icons/boost.svg';
 import leaderboardIcon from '@/assets/icons/leaderboard.svg';
 import skinsIcon from '@/assets/icons/skins.svg';
 
 const store = useCoinsStore();
+const router = useRouter();
 
 const toLeaderboard = () => {};
 
-const toSkins = () => {};
+const toSkins = () => {
+  router.push(ROUTES.SKINS_PAGE.PATH)
+};
 
 const tools = [
   {
@@ -23,7 +28,7 @@ const tools = [
     icon: leaderboardIcon,
   },
   {
-    name: 'skins',
+    name: 'skins-page',
     method: toSkins,
     icon: skinsIcon,
   },
@@ -63,6 +68,7 @@ watch(() => store.isBoostPowerActive, () => {
   margin-bottom: 0;
   border-radius: 15px;
   background-color: #292c31;
+  border: 1px solid #1a1a1a;
   display: grid;
   grid-auto-flow: column;
   grid-gap: 10px;
@@ -74,10 +80,13 @@ watch(() => store.isBoostPowerActive, () => {
     width: 50px;
     border-radius: 50%;
     padding: 15px;
-    background-color: #0f222d;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     &:active {
-      background-color: #172732;
+      transform: scale(1);
     }
   }
 

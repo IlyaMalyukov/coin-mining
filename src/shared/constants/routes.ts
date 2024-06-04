@@ -3,4 +3,8 @@ export const ROUTES = {
         PATH: '/',
         NAME: 'main-page',
     },
+    SKINS_PAGE: {
+        PATH: '/skins',
+        NAME: 'skins-page',
+    },
 };

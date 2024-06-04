@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useCoinsStore } from '@/app/stores/coins';
+import { skinImage } from '@/shared';
 
 const store = useCoinsStore();
 
@@ -10,7 +11,7 @@ const emits = defineEmits(['earn'])
   <div class="wrapper">
     <img
       class="coin"
-      src="@/assets/icons/bitcoin.svg"
+      :src="skinImage[store.activeSkin]"
       alt="coin"
       @click="emits('earn', store.profitPerTap)"
     />

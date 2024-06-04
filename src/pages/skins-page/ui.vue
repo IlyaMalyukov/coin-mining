@@ -1,22 +1,23 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
 import { useCoinsStore } from '@/app/stores/coins';
-import { Balance } from '@/entities';
-import { EarnCoin } from '@/features';
-import { Toolbar } from '@/widgets';
+import { Skins } from '@/entities';
+import type { Skin } from '@/app/stores/coins/types.ts';
 
+
+const router = useRouter();
 const store = useCoinsStore();
 
-const earnCoins = (coinsAmount: number) => {
-  store.updateTotalBalance(coinsAmount)
+const selectSkin = (skin: Skin) => {
+  store.setSkin(skin)
+  router.push('/');
 };
 </script>
 
 <template>
   <div class="page">
-    <h1>COIN MINING</h1>
-    <balance :balance="store.totalBalance"/>
-    <earn-coin @earn="earnCoins"/>
-    <toolbar/>
+    <h1>SKINS</h1>
+    <skins @select-skin="selectSkin"/>
   </div>
 </template>
 
