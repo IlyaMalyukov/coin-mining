@@ -9,12 +9,15 @@ const emits = defineEmits(['earn'])
 
 <template>
   <div class="wrapper">
-    <img
-      class="coin"
-      :src="skinImage[store.activeSkin]"
-      alt="coin"
-      @click="emits('earn', store.profitPerTap)"
-    />
+    <div
+      class="coin-wrapper"
+      @click="emits('earn', store.profitPerTap)">
+      <img
+        class="coin"
+        :src="skinImage[store.activeSkin]"
+        alt="coin"
+      />
+    </div>
     <img
       :class="store.isBoostPowerActive ? 'lightning lightning_active' : 'lightning'"
       src="@/assets/images/lightning.png"
@@ -35,7 +38,9 @@ const emits = defineEmits(['earn'])
   max-width: 300px;
   cursor: pointer;
   transition: transform 0.3s ease;
+}
 
+.coin-wrapper {
   &:active {
     transform: rotate(5deg);
   }
@@ -53,5 +58,9 @@ const emits = defineEmits(['earn'])
   &_active {
     opacity: 1;
   }
+}
+
+img {
+  pointer-events: none;
 }
 </style>

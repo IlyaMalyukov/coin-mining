@@ -55,6 +55,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+img {
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+img::selection {
+  background: rgba(255, 223, 0, 0.3);
+  color: inherit;
+}
+
 .card {
   padding: 2em;
 }
