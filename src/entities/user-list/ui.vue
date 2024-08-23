@@ -30,7 +30,6 @@ defineProps({
   display: grid;
   grid-gap: 25px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .user-card {

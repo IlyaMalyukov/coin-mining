@@ -19,17 +19,3 @@ const earnCoins = (coinsAmount: number) => {
     <toolbar/>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 80%;
-  margin-bottom: 40px;
-
-  &__title {
-    font-size: 10vw;
-  }
-}
-</style>

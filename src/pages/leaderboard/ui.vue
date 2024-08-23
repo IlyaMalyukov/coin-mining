@@ -28,13 +28,3 @@ onMounted(async () => {
     <br>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  padding-bottom: 40px;
-}
-</style>

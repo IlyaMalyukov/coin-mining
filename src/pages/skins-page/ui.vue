@@ -23,13 +23,3 @@ const selectSkin = (skin: Skin) => {
     <skins @select-skin="selectSkin"/>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  margin-bottom: 40px;
-}
-</style>
