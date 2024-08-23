@@ -18,8 +18,9 @@ const router = useRouter();
   cursor: pointer;
   border-radius: 10px;
   border: 1px solid #1a1a1a;
-  padding: 10px;
+  padding: 2vw 4vw;
   background: #fd8f00;
+  font-size: 3vw;
 
   &:hover {
     background: #ff6a00;

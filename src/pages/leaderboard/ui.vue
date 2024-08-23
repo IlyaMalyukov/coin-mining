@@ -34,8 +34,7 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  min-height: 100vh;
-  margin-bottom: 40px;
+  height: 100vh;
+  padding-bottom: 40px;
 }
 </style>

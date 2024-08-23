@@ -29,8 +29,7 @@ const selectSkin = (skin: Skin) => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
   margin-bottom: 40px;
 }
 </style>

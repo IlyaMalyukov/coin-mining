@@ -31,7 +31,8 @@ const emits = defineEmits(['earn'])
 .coin {
   position: relative;
   z-index: 1;
-  width: 300px;
+  width: 60vw;
+  max-width: 300px;
   cursor: pointer;
   transition: transform 0.3s ease;
 

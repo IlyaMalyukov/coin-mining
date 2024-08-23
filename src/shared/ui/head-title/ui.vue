@@ -18,11 +18,12 @@ defineProps({
 .header {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
   margin-bottom: 25px;
 
   &__title {
     margin: 0 auto;
+    font-size: 10vw;
   }
 
   &__button {

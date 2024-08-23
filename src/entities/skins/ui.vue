@@ -36,10 +36,11 @@ const skins = [
 .list {
   display: grid;
   grid-gap: 25px;
-  width: 50%;
+  width: 100%;
 }
 
 .skin-card {
+  width: 100%;
   display: flex;
   align-items: center;
   cursor: pointer;

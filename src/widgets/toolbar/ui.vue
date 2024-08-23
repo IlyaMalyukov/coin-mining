@@ -69,8 +69,6 @@ watch(() => store.isBoostPowerActive, () => {
 
 <style lang="scss" scoped>
 .toolbar {
-  margin-top: auto;
-  margin-bottom: 0;
   border-radius: 15px;
   background-color: #292c31;
   border: 1px solid #1a1a1a;
@@ -78,13 +76,18 @@ watch(() => store.isBoostPowerActive, () => {
   grid-auto-flow: column;
   grid-gap: 10px;
   padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  margin: auto auto 0;
 
   &__button {
     cursor: pointer;
     user-select: none;
-    width: 50px;
     border-radius: 50%;
     padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       transform: scale(1.1);

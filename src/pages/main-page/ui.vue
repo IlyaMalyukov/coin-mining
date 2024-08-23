@@ -13,7 +13,7 @@ const earnCoins = (coinsAmount: number) => {
 
 <template>
   <div class="page">
-    <h1>COIN MINING</h1>
+    <h1 class="page__title">COIN MINING</h1>
     <balance :balance="store.totalBalance"/>
     <earn-coin @earn="earnCoins"/>
     <toolbar/>
@@ -25,8 +25,11 @@ const earnCoins = (coinsAmount: number) => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  min-height: 100vh;
+  height: 80%;
   margin-bottom: 40px;
+
+  &__title {
+    font-size: 10vw;
+  }
 }
 </style>

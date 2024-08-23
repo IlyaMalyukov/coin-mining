@@ -29,17 +29,18 @@ defineProps({
 .list {
   display: grid;
   grid-gap: 25px;
-  width: 50%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .user-card {
+  width: 100%;
   display: flex;
   align-items: center;
   border: 1px solid #1a1a1a;
   border-radius: 10px;
   padding: 5px;
   background: #292c31;
-  font-size: 36px;
 
   &__position {
     padding-right: 10px;
