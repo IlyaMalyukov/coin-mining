@@ -1,1 +1,1 @@
-export type Skin = 'bitcoin' | 'etherium' | 'tether' | 'solana'
+export type Skin = 'bitcoin' | 'ethereum' | 'tether' | 'solana'

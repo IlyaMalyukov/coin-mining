@@ -1,5 +1,5 @@
 import BitcoinImage from '@/assets/images/bitcoin.png';
-import EtheriumImage from '@/assets/images/etherium.png';
+import EthereumImage from '@/assets/images/ethereum.png';
 import TetherImage from '@/assets/images/tether.png';
 import SolanaImage from '@/assets/images/solana.png';
 import boostIcon from '@/assets/icons/boost.svg';
@@ -8,7 +8,7 @@ import skinsIcon from '@/assets/icons/skins.svg';
 
 const skinImage = {
   'bitcoin': BitcoinImage,
-  'etherium': EtheriumImage,
+  'ethereum': EthereumImage,
   'tether': TetherImage,
   'solana': SolanaImage,
 };

@@ -9,7 +9,7 @@ const emits = defineEmits(['select-skin'])
 
 const skins = [
   'bitcoin',
-  'etherium',
+  'ethereum',
   'tether',
   'solana',
 ];
