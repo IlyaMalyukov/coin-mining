@@ -2,8 +2,7 @@
 import { watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { useCoinsStore } from '@/app/stores/coins';
-import { ROUTES, toolbarImage } from '@/shared';
-import type { Tool } from './types.ts';
+import { ROUTES } from '@/shared';
 
 const store = useCoinsStore();
 const router = useRouter();
@@ -60,7 +59,7 @@ watch(() => store.isBoostPowerActive, () => {
     >
       <img
         class="toolbar__icon"
-        :src="toolbarImage[<Tool>tool.name]"
+        :src="`/src/assets/icons/${tool.name}.svg`"
         :alt="tool.name"
       />
     </div>

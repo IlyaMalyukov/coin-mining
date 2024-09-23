@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useCoinsStore } from '@/app/stores/coins';
-import { skinImage } from '@/shared';
 
 defineProps({
   balance: Number,
@@ -14,7 +13,7 @@ const store = useCoinsStore();
     <span class="balance__total">{{balance}}</span>
     <img
       class="balance__coin"
-      :src="skinImage[store.activeSkin]"
+      :src="`/src/assets/images/${store.activeSkin}.png`"
       alt="coin"
     />
   </div>

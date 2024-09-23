@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { useCoinsStore } from '@/app/stores/coins';
-import type { Skin } from '@/app/stores/coins/types.ts';
-import { skinImage } from '@/shared';
 
 const store = useCoinsStore();
 
@@ -24,7 +22,7 @@ const skins = [
     >
       <img
         class="skin-card__image"
-        :src="skinImage[<Skin>skin]"
+        :src="`/src/assets/images/${skin}.png`"
         :alt="skin"
       />
       <span class="skin-card__name">{{skin}}</span>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useCoinsStore } from '@/app/stores/coins';
-import { skinImage } from '@/shared';
 
 const store = useCoinsStore();
 
@@ -14,13 +13,13 @@ const emits = defineEmits(['earn'])
       @click="emits('earn', store.profitPerTap)">
       <img
         class="coin"
-        :src="skinImage[store.activeSkin]"
+        :src="`/src/assets/images/${store.activeSkin}.png`"
         alt="coin"
       />
     </div>
     <img
       :class="store.isBoostPowerActive ? 'lightning lightning_active' : 'lightning'"
-      src="@/assets/images/lightning.png"
+      src="/src/assets/images/lightning.png"
       alt="lightning"
     />
   </div>
