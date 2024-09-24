@@ -3,6 +3,7 @@ import { watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { useCoinsStore } from '@/app/stores/coins';
 import { ROUTES } from '@/shared';
+import type { Tool } from './types.ts';
 
 const store = useCoinsStore();
 const router = useRouter();
@@ -23,7 +24,7 @@ const boostPower = () => {
   store.boostPower();
 };
 
-const tools = [
+const tools: Tool[] = [
   {
     name: 'boost',
     method: boostPower,
